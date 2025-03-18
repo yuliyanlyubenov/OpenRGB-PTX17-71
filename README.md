@@ -1,3 +1,20 @@
+# OpenRGB fork for Acer Gaming RGB USB Keyboards (per key RGB LED) for Acer Predator and probably some Nitro laptops. (This repo is mainly tested on PTX17-71 (Acer Predator Triton 17 X laptop) but I will hopefully add more devices)
+
+## 🚧 Roadmap:
+- [x] RGB modes support for the PTX17-71 laptop
+- [ ] Support for per key color settings
+- [ ] Possibly support for realtime custom effects (like music or screen like copy in keyboard)
+- [ ] Support for more USB interface Acer Predator/Nitro RGB keyboards. For now only vid/pid 05AF/766C is supported.
+- [ ] Make the code clean and follow the official OpenRGB contribution rules as much as possible and finally send official pull requests to the main OpenRGB repos.
+
+## License
+GNU General Public License v2
+
+### 💖 Donations
+Donations are completely optional but show your love for open-source development and motivate me to add more features to this project!
+Ethereum (ERC20): 0xbfb3108422593146f9c11a5264b5f648f1dee7d0
+
+
 ## ![OpenRGB](Documentation/Images/OpenRGB.png "OpenRGB Logo")
 
 ![Pipeline Status](https://gitlab.com/CalcProgrammer1/OpenRGB/badges/master/pipeline.svg)
