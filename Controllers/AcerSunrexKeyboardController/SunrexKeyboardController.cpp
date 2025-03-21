@@ -188,6 +188,9 @@ void SunrexKeyboardController::SetEffect(unsigned char mode,
     case SUNREX_KEYBOARD_MODE_FIREBALL: // Fireball:
         memcpy(buf, mfireball, sizeof(buf));
         break;
+    case SUNREX_KEYBOARD_MODE_HEARTBEAT: // Heartbeat:
+        memcpy(buf, mheartbeat, sizeof(buf));
+        break;
     case SUNREX_KEYBOARD_MODE_BREATHING: // Breathing:
         memcpy(buf, mbreathing, sizeof(buf));
         break;
