@@ -244,6 +244,22 @@ RGBController_SunrexKeyboard::RGBController_SunrexKeyboard(SunrexKeyboardControl
     Ripple.speed                = SUNREX_KEYBOARD_SPEED_DEF;
     modes.push_back(Ripple);
 
+    mode Raindrop;
+    Raindrop.name                 = "Rain drop";
+    Raindrop.value                = SUNREX_KEYBOARD_MODE_RAINDROP;
+    Raindrop.flags                = MODE_FLAG_HAS_MODE_SPECIFIC_COLOR | MODE_FLAG_HAS_SPEED | MODE_FLAG_HAS_BRIGHTNESS | MODE_FLAG_AUTOMATIC_SAVE;
+    Raindrop.color_mode           = MODE_COLORS_MODE_SPECIFIC;
+    Raindrop.colors_min           = 1;
+    Raindrop.colors_max           = 1;
+    Raindrop.colors.resize(Raindrop.colors_max);
+    Raindrop.brightness_min       = SUNREX_KEYBOARD_BRIGHTNESS_MIN;
+    Raindrop.brightness_max       = SUNREX_KEYBOARD_BRIGHTNESS_MAX;
+    Raindrop.brightness           = SUNREX_KEYBOARD_BRIGHTNESS_DEF;
+    Raindrop.speed_min            = SUNREX_KEYBOARD_SPEED_MIN;
+    Raindrop.speed_max            = SUNREX_KEYBOARD_SPEED_MAX;
+    Raindrop.speed                = SUNREX_KEYBOARD_SPEED_DEF;
+    modes.push_back(Raindrop);
+    
     mode Fireball;
     Fireball.name                 = "Fireball";
     Fireball.value                = SUNREX_KEYBOARD_MODE_FIREBALL;
