@@ -18,7 +18,7 @@
 #include "SunrexKeyboardController.h"
 
 #define SUNREX_KEYBOARD_ROWS           6
-#define SUNREX_KEYBOARD_COLUMNS       22
+#define SUNREX_KEYBOARD_COLUMNS       17
 
 class RGBController_SunrexKeyboard : public RGBController
 {

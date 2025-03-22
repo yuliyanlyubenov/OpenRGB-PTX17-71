@@ -17,12 +17,12 @@
 
 static unsigned int matrix_map[SUNREX_KEYBOARD_ROWS][SUNREX_KEYBOARD_COLUMNS] =
 {
-    {   0,  NA,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,  NA,  13,  14,  15,  NA,  NA,  NA,  NA }, // Skipped: 1, 17, 18, 19, 20
-    {  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,  26,  27,  28,  29,  NA,  30,  31,  32,  33,  34,  35,  36 },
-    {  37,  NA,  38,  39,  40,  41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,  52,  53,  54,  55,  56,  57 },
-    {  58,  NA,  59,  60,  61,  62,  63,  64,  65,  66,  67,  68,  69,  70,  NA,  NA,  NA,  NA,  71,  72,  73,  NA }, // Skipped: 75, 77, 78, 79, 83
-    {  74,  NA,  NA,  75,  76,  77,  78,  79,  80,  81,  82,  83,  84,  85,  NA,  NA,  86,  NA,  87,  88,  89,  90 }, // Skipped: 85, 96, 98, 100
-    {  91,  92,  93,  NA,  NA,  NA,  NA,  94,  NA,  NA,  NA,  95,  96,  97,  98,  99, 100, 101, 102,  NA, 103,  NA }  // Skipped: 108, 109, 111, 112, 113, 116, 123, 125
+  { 0, 6,11,17,23,28,33,39,44,49,55,61,66,69,71,74,80 },
+  { 1, 7,12,18,24,29,34,40,45,50,56,62,67,NA,NA,75,81 },
+  { 2, 8,13,19,25,30,35,41,46,51,57,63,68,NA,NA,76,82 },
+  { 3, 9,14,20,26,31,36,42,47,52,58,64,NA,NA,NA,77,83 },
+  { 4,NA,15,21,27,32,37,43,48,53,59,65,NA,NA,72,78,84 },
+  { 5,10,16,22,NA,NA,38,NA,NA,54,60,NA,NA,70,73,79,85 }
 };
 
 static const char* zone_names[] =
@@ -37,136 +37,99 @@ static zone_type zone_types[] =
 
 static const unsigned int zone_sizes[] =
 {
-    104,
+    86,
 };
 
 static const char *led_names[] =
 {
     KEY_EN_ESCAPE,
     // Skip index 1
-    KEY_EN_F1,
-    KEY_EN_F2,
-    KEY_EN_F3,
-    KEY_EN_F4,
-    KEY_EN_F5,
-    KEY_EN_F6,
-    KEY_EN_F7,
-    KEY_EN_F8,
-    KEY_EN_F9,
-    KEY_EN_F10,
-    KEY_EN_F11,
-    KEY_EN_F12,
-    KEY_EN_PRINT_SCREEN,
-    KEY_EN_SCROLL_LOCK,
-    KEY_EN_PAUSE_BREAK,
-    // Skip index 17
-    // Skip index 18
-    // Skip index 19
-    // Skip index 20
     KEY_EN_BACK_TICK,
-    KEY_EN_1,
-    KEY_EN_2,
-    KEY_EN_3,
-    KEY_EN_4,
-    KEY_EN_5,
-    KEY_EN_6,
-    KEY_EN_7,
-    KEY_EN_8,
-    KEY_EN_9,
-    KEY_EN_0,
-    KEY_EN_MINUS,
-    KEY_EN_EQUALS,
-    KEY_EN_BACKSPACE,
-    KEY_EN_INSERT,
-    KEY_EN_HOME,
-    KEY_EN_PAGE_UP,
-    KEY_EN_NUMPAD_LOCK,
-    KEY_EN_NUMPAD_DIVIDE,
-    KEY_EN_NUMPAD_TIMES,
-    KEY_EN_NUMPAD_MINUS,
     KEY_EN_TAB,
-    KEY_EN_Q,
-    KEY_EN_W,
-    KEY_EN_E,
-    KEY_EN_R,
-    KEY_EN_T,
-    KEY_EN_Y,
-    KEY_EN_U,
-    KEY_EN_I,
-    KEY_EN_O,
-    KEY_EN_P,
-    KEY_EN_LEFT_BRACKET,
-    KEY_EN_RIGHT_BRACKET,
-    KEY_EN_ANSI_BACK_SLASH,
-    KEY_EN_DELETE,
-    KEY_EN_END,
-    KEY_EN_PAGE_DOWN,
-    KEY_EN_NUMPAD_7,
-    KEY_EN_NUMPAD_8,
-    KEY_EN_NUMPAD_9,
-    KEY_EN_NUMPAD_PLUS,
     KEY_EN_CAPS_LOCK,
-    KEY_EN_A,
-    KEY_EN_S,
-    KEY_EN_D,
-    KEY_EN_F,
-    KEY_EN_G,
-    KEY_EN_H,
-    KEY_EN_J,
-    KEY_EN_K,
-    KEY_EN_L,
-    KEY_EN_SEMICOLON,
-    KEY_EN_QUOTE,
-    // Skip index 75
-    KEY_EN_ANSI_ENTER,
-    // Skip index 77
-    // Skip index 78
-    // Skip index 79
-    KEY_EN_NUMPAD_4,
-    KEY_EN_NUMPAD_5,
-    KEY_EN_NUMPAD_6,
-    // Skip index 83
     KEY_EN_LEFT_SHIFT,
-    // Skip index 85
-    KEY_EN_Z,
-    KEY_EN_X,
-    KEY_EN_C,
-    KEY_EN_V,
-    KEY_EN_B,
-    KEY_EN_N,
-    KEY_EN_M,
-    KEY_EN_COMMA,
-    KEY_EN_PERIOD,
-    KEY_EN_FORWARD_SLASH,
-    // Skip index 96
-    KEY_EN_RIGHT_SHIFT,
-    // Skip index 98
-    KEY_EN_UP_ARROW,
-    // Skip index 100
-    KEY_EN_NUMPAD_1,
-    KEY_EN_NUMPAD_2,
-    KEY_EN_NUMPAD_3,
-    KEY_EN_NUMPAD_ENTER,
     KEY_EN_LEFT_CONTROL,
+    KEY_EN_F1,
+    KEY_EN_1,
+    KEY_EN_Q,
+    KEY_EN_A,
+    // Skip index 10
+    KEY_EN_LEFT_FUNCTION,
+    KEY_EN_F2,
+    KEY_EN_2,
+    KEY_EN_W,
+    KEY_EN_S,
+    KEY_EN_Z,
     KEY_EN_LEFT_WINDOWS,
+    KEY_EN_F3,
+    KEY_EN_3,
+    KEY_EN_E,
+    KEY_EN_D,
+    KEY_EN_X,
     KEY_EN_LEFT_ALT,
-    // Skip index 108
-    // Skip index 109
+    KEY_EN_F4,
+    KEY_EN_4,
+    KEY_EN_R,
+    KEY_EN_F,
+    KEY_EN_C,
+    KEY_EN_F5,
+    KEY_EN_5,
+    KEY_EN_T,
+    KEY_EN_G,
+    KEY_EN_V,
+    KEY_EN_F6,
+    KEY_EN_6,
+    KEY_EN_Y,
+    KEY_EN_H,
+    KEY_EN_B,
     KEY_EN_SPACE,
-    // Skip index 111
-    // Skip index 112
-    // Skip index 113
+    KEY_EN_F7,
+    KEY_EN_7,
+    KEY_EN_U,
+    KEY_EN_J,
+    KEY_EN_N,
+    KEY_EN_F8,
+    KEY_EN_8,
+    KEY_EN_I,
+    KEY_EN_K,
+    KEY_EN_M,
+    KEY_EN_F9,
+    KEY_EN_9,
+    KEY_EN_O,
+    KEY_EN_L,
+    KEY_EN_COMMA,
     KEY_EN_RIGHT_ALT,
-    KEY_EN_RIGHT_FUNCTION,
-    // Skip index 116
+    KEY_EN_F10,
+    KEY_EN_0,
+    KEY_EN_P,
+    KEY_EN_SEMICOLON,
+    KEY_EN_PERIOD,
     KEY_EN_MENU,
-    KEY_EN_RIGHT_CONTROL,
+    KEY_EN_F11,
+    KEY_EN_MINUS,
+    KEY_EN_LEFT_BRACKET,
+    KEY_EN_QUOTE,
+    KEY_EN_FORWARD_SLASH,
+    KEY_EN_F12,
+    KEY_EN_PLUS,
+    KEY_EN_RIGHT_BRACKET,
+    KEY_EN_PRINT_SCREEN,
+    KEY_EN_BACK_SLASH,
+    KEY_EN_INSERT,
+    KEY_EN_RIGHT_SHIFT,
     KEY_EN_LEFT_ARROW,
+    KEY_EN_DELETE,
+    KEY_EN_BACKSPACE,
+    KEY_EN_BACK_SLASH,
+    KEY_EN_ANSI_ENTER,
+    KEY_EN_UP_ARROW,
     KEY_EN_DOWN_ARROW,
-    KEY_EN_RIGHT_ARROW,
-    KEY_EN_NUMPAD_0,
-    // Skip index 123
-    KEY_EN_NUMPAD_PERIOD,
+    KEY_EN_POWER,
+    KEY_EN_POUND,
+    KEY_EN_MEDIA_PLAY_PAUSE,
+    KEY_EN_MEDIA_PREVIOUS,
+    KEY_EN_MEDIA_NEXT,
+    KEY_EN_RIGHT_ARROW
 };
 
 /**------------------------------------------------------------------*\
